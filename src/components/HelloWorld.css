@@ -1,0 +1,20 @@
+.hello-world {
+    color: red;
+    font-size: 1.5em;
+    /*
+        단위 (width, height):
+            - px    :   절대적인 크기.
+            - %     :   상위 엘리먼트에 대비해 몇% 차지 하는지
+            - em    :   현재 font-size에 대비한 크기 (font-size: 20px, 1.5em: 30px)
+            - rem   :   root의 font-size에 대비한 크기 
+                            (html 태그의 font-size: 10px, 1.5rem: 15px)
+            - vw/vh :   viewPort (width / height)
+                        - device의 스크린 크기 대비
+                            (screen width: 300px ==> 100vw:300px)
+                            (screen height: 600px ==> 10vh: 60px)
+        flex:
+            - flex-direction :      flex 축 정하기 (방향)   (row vs. column)
+            - justify-content:      flex 축에 대한 정렬
+            - align-items:          flex축 반대에 대한 배치
+    */
+}

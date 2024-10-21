@@ -13,6 +13,9 @@ export default function BlinkComponent({text}) {
             setShowText(showText => !showText);
         }, 1000)
         return () => {
+            // dependency가 빈배열이므로 아무런 값의 변화가 없음. 이 때 useEffect의 첫 번째 인자는 무조건 한번만 실행됨
+            // 만약 dependency가 변동이 있어서 여러번 실행된다면 useEffect의 첫번째 인자 실행 -> 반환함수 -> useEffect의 첫번째 인자 실행이런식으로 반복됨. 
+            console.log("반환함수 실행");
             clearInterval(timeoutId)
         }
     }, [])

@@ -6,6 +6,7 @@
 // import BlinkComponent from "./components/BlinkComponent"
 // import CounterComponent from "./components/CounterComponent"
 
+// import BlinkComponent from "./components/BlinkComponent";
 import CountComponent from "./components/CountComponent"
 import {useState} from 'react';
 
@@ -24,7 +25,7 @@ function App() {
       {/* <HelloWorld2/> */}
       {/* {sampleVar.greeting} */}
       {/* <MyButton title="네이버로 이동" color="green" clickUrl="https://www.naver.com"/ > */}
-      {/* <BlinkComponent text="brbrbrbr"/> */}
+      {/* <BlinkComponent text="깜박거리고 사라집니다."/> */}
       {/* <CounterComponent/>    */}
       <button onClick={()=> setVisible(!visible)}>
         보이기

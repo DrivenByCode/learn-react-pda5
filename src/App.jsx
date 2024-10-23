@@ -3,6 +3,10 @@
 // import CaptionImage from './components/CaptionImage'
 // import MyButton from "./components/MyButton"
 
+// import { useState } from 'react';
+
+// import UserDetail from './components/UserDetail';
+
 // import Practice1 from './components/Practice1';
 // import Practice2 from './components/Practice2';
 
@@ -17,12 +21,31 @@
 // import AdditionalPractice1 from './components/AdditionalPractice1';
 // import AdditionalPractice2 from './components/AdditionalPractice2';
 // import AdditionalPractice3 from './components/AdditionalPractice3';
-import AdditionalPractice4 from './components/AdditionalPractice4';
+// import AdditionalPractice4 from './components/AdditionalPractice4';
+
+// import PrimeCalculator from './components/PrimeCalculator';
+
+// import MyPage from './components2/MyPage';
+// import ThemeButton from './components2/ThemeButton';
+// import { ThemeProvider } from './contexts/themeContext';
+// import Button from 'react-bootstrap/Button';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import ToDoList from './Practice/to-do-list/ToDoList';
 
 function App() {
   // const [visible, setVisible] = useState(false);
+  // const [theme, setTheme] = useState();
   return (
-    <div>
+    <>
+      {/* <Button>버튼</Button>
+      <ThemeProvider>
+        <ThemeButton
+          onChangeTheme={() => {
+            setTheme((prev) => (prev === 'dark' ? 'light' : 'dark'));
+          }}
+        />
+        <MyPage theme={theme} />
+      </ThemeProvider> */}
       {/* <OnChangeInput/> */}
 
       {/* <Practice1 />
@@ -31,7 +54,9 @@ function App() {
       <AdditionalPractice1 />
       <AdditionalPractice2 />
       <AdditionalPractice3 /> */}
-      <AdditionalPractice4 />
+      {/* <AdditionalPractice4 /> */}
+      {/* <PrimeCalculator /> */}
+      {/* <UserDetail /> */}
 
       {/* <CaptionImage 
         imgUrl="https://kkoma.net/web/product/big/201905/4aa48d0ebab9f50f9e3b47fb7b8af386.jpg" 
@@ -50,7 +75,8 @@ function App() {
         보이기
       </button>
       {visible ? <CountComponent/> : null} */}
-    </div>
+      <ToDoList />
+    </>
   );
 }
 

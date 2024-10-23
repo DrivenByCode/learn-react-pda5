@@ -1,5 +1,8 @@
 import { useState, useEffect } from 'react';
 
+// counter state를 이용하는게 아니라 flag를 이용하는 것으로 바꿔보기
+// useEffect의 dependency에 적힌 변수는 함수 구현부에서 무조건 사용하도록 구현.
+
 export default function AdditionalPractice4() {
   const [time, setTime] = useState(0);
   const [counter, setCounter] = useState(-9);

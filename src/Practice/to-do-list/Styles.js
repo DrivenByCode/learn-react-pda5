@@ -11,6 +11,7 @@ const styles = {
   title: {
     fontSize: '2em',
     marginBottom: '1em',
+    fontWeight: 'bold',
   },
   inputContainer: {
     display: 'flex',
@@ -24,6 +25,13 @@ const styles = {
     borderRadius: '5px',
     border: '1px solid #ccc',
     width: '200px',
+  },
+  searchInput: {
+    padding: '0.5em',
+    borderRadius: '5px',
+    border: '1px solid #ccc',
+    width: '35%',
+    marginBottom: '1em',
   },
   button: {
     padding: '0.5em 1em',
@@ -46,7 +54,7 @@ const styles = {
   },
   todoList: {
     width: '100%',
-    maxWidth: '400px',
+    maxWidth: '50%',
   },
   todoItem: {
     padding: '1em',

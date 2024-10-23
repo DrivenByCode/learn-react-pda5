@@ -30,11 +30,34 @@
 // import { ThemeProvider } from './contexts/themeContext';
 // import Button from 'react-bootstrap/Button';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import ToDoList from './practice/to-do-list/ToDoList_save';
+// import ToDoList from './practice/to-do-list/ToDoList_save';
+import { useState } from 'react';
+import useTodo from './practice/to-do-list/hooks/useTodo';
+import TodoInput from './practice/to-do-list/components/TodoInput';
+import Colorbar from './practice/to-do-list/components/ColorBar';
+import TodoList from './practice/to-do-list/components/TodoList';
+import SearchInput from './practice/to-do-list/components/SearchInput';
+import styles from './practice/to-do-list/Styles';
+
+const colors = ['grey', 'red', 'yellow', 'pink'];
 
 function App() {
   // const [visible, setVisible] = useState(false);
   // const [theme, setTheme] = useState();
+
+  const { todoList, addTodo, removeTodo, editTodo } = useTodo();
+  const [text, setText] = useState('');
+  const [color, setColor] = useState(colors[0]);
+  const [query, setQuery] = useState('');
+
+  const handleAddTodo = () => {
+    if (text.trim()) {
+      addTodo(text, color);
+      setText('');
+    }
+  };
+
+  const filteredTodos = todoList.filter((todo) => todo.text.toLowerCase().includes(query.toLowerCase()));
   return (
     <>
       {/* <Button>버튼</Button>
@@ -75,7 +98,14 @@ function App() {
         보이기
       </button>
       {visible ? <CountComponent/> : null} */}
-      <ToDoList />
+      {/* <ToDoList /> */}
+      <div style={styles.container}>
+        <h1 style={styles.title}>Todo App</h1>
+        <TodoInput text={text} setText={setText} onAdd={handleAddTodo} />
+        <Colorbar colors={colors} selectedColor={color} onSelectColor={setColor} />
+        <SearchInput query={query} setQuery={setQuery} />
+        <TodoList todos={filteredTodos} onRemove={removeTodo} onEdit={editTodo} />
+      </div>
     </>
   );
 }

@@ -21,9 +21,7 @@ export default function TodoItem({ todo, onRemove, onEdit }) {
       ) : (
         <>
           <span onClick={() => setIsEditing(true)}>{todo.text}</span>
-          <Button onClick={() => onRemove(todo.id)} style={styles.removeButton}>
-            삭제
-          </Button>
+          <Button onClick={() => onRemove(todo.id)}>삭제</Button>
         </>
       )}
     </div>

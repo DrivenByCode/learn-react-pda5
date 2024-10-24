@@ -8,7 +8,7 @@ export default function ToDoList() {
   const [texts, setTexts] = useState([]);
   const [color, setColor] = useState('');
 
-  const colors = ['grey', 'red', 'yellow', 'pink'];
+  const colors = ['white', 'red', 'yellow', 'pink'];
 
   const handleAddTodo = () => {
     if (text.trim()) {

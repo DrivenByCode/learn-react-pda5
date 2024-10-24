@@ -19,12 +19,13 @@ const styles = {
     alignItems: 'center',
     gap: '1em',
     marginBottom: '1em',
+    width: '35%',
   },
   input: {
     padding: '0.5em',
     borderRadius: '5px',
     border: '1px solid #ccc',
-    width: '200px',
+    width: '100%',
   },
   searchInput: {
     padding: '0.5em',
@@ -47,6 +48,7 @@ const styles = {
     height: '30px',
     cursor: 'pointer',
     border: 'none',
+    borderRadius: '2em',
   },
   todoTitle: {
     fontSize: '1.5em',
@@ -54,7 +56,7 @@ const styles = {
   },
   todoList: {
     width: '100%',
-    maxWidth: '50%',
+    maxWidth: '35%',
   },
   todoItem: {
     padding: '1em',

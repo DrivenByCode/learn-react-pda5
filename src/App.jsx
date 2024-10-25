@@ -30,9 +30,9 @@
 // import { ThemeProvider } from './contexts/themeContext';
 // import Button from 'react-bootstrap/Button';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import ToDo from './Practice/to-do-list/ToDo'; // Practice ToDo.jsx
+// import ToDo from './Practice/to-do-list/ToDo'; // Practice ToDo.jsx
 // import ToDoList from './practice/to-do-list/ToDoList_save';
-// import BulletinBoard from './Practice/bulletin-board/BulletinBoard'; // Practice bulletin - board
+import BulletinBoard from './Practice/bulletin-board/BulletinBoard'; // Practice bulletin - board
 
 function App() {
   // const [visible, setVisible] = useState(false);
@@ -78,8 +78,9 @@ function App() {
         보이기
       </button>
       {visible ? <CountComponent/> : null} */}
-      <ToDo />
-      {/* <BulletinBoard /> */}
+
+      <BulletinBoard />
+      {/* <ToDo /> */}
     </>
   );
 }

@@ -64,6 +64,10 @@ const styles = {
     borderRadius: '5px',
     color: '#000',
     fontWeight: 'bold',
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
   },
 };
 

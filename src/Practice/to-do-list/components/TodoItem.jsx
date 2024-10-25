@@ -11,11 +11,11 @@ export default function TodoItem({ todo, onRemove, onEdit }) {
     setIsEditing(false);
   };
 
-  return (
-    <div style={{ ...styles.todoItem, backgroundColor: todo.color }}>
+  const PostArea = () => (
+    <>
       {isEditing ? (
         <>
-          <input value={editText} onChange={(e) => setEditText(e.target.value)} style={styles.input} />
+          <input value={editText} onChange={(e) => setEditText(e.target.value)} style={styles.ivcclnput} />
           <Button onClick={handleSave}>저장</Button>
         </>
       ) : (
@@ -24,6 +24,12 @@ export default function TodoItem({ todo, onRemove, onEdit }) {
           <Button onClick={() => onRemove(todo.id)}>삭제</Button>
         </>
       )}
+    </>
+  );
+
+  return (
+    <div style={{ ...styles.todoItem, backgroundColor: todo.color }}>
+      <PostArea />
     </div>
   );
 }

@@ -30,9 +30,17 @@
 // import { ThemeProvider } from './contexts/themeContext';
 // import Button from 'react-bootstrap/Button';
 import 'bootstrap/dist/css/bootstrap.min.css';
-// import ToDo from './Practice/to-do-list/ToDo'; // Practice ToDo.jsx
+import ToDo from './practice/to-do-list/ToDo'; // practice ToDo.jsx
 // import ToDoList from './practice/to-do-list/ToDoList_save';
-import BulletinBoard from './Practice/bulletin-board/BulletinBoard'; // Practice bulletin - board
+// import BulletinBoard from './practice/bulletin-board/BulletinBoard'; // practice bulletin - board
+// import withUser from './components2/withUser';
+// import UserDisplay from './components2/UserDisplay';
+
+// const UserDisplayWithUser = withUser(UserDisplay);
+
+// import Cors from './practice/handle-cors-error/cors';
+
+// import JwtTest from './practice/JwtTest';
 
 function App() {
   // const [visible, setVisible] = useState(false);
@@ -79,8 +87,15 @@ function App() {
       </button>
       {visible ? <CountComponent/> : null} */}
 
-      <BulletinBoard />
-      {/* <ToDo /> */}
+      {/* <BulletinBoard /> */}
+
+      {/* <UserDisplayWithUser userId={1} /> */}
+      {/* <Cors /> */}
+      {/* <JwtTest /> */}
+
+      {/* <Login /> */}
+
+      <ToDo />
     </>
   );
 }
